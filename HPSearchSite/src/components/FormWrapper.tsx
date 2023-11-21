@@ -2,17 +2,17 @@ import Logo from "./Logo";
 import Title from "./Title";
 import SubmitForm from "./SubmitForm";
 import Select from "./Select";
-import Checkbox from "./Checkbox";
+import Radio from "./Radio";
 
 const FormWrapper = () => {
   return (
-    <div className="form-wrapper">
+    <form className="form-wrapper">
       <Logo />
       <Title />
-      <Checkbox />
+      <Radio />
       <Select />
       <SubmitForm />
-    </div>
+    </form>
   );
 };
 
