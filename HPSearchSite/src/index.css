@@ -1,0 +1,80 @@
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: 'Bigelow Rules', serif;
+  background: url(images/papiro_bg_gg.jpg) no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* <a href='https://pt.pngtree.com/freebackground/pure-vintage-kraft-paper-texture-background_925198.html'>fotos de fundo grátis de pt.pngtree.com/</a> */
+
+.form-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.app-logo {
+  height: 95px;
+  margin-bottom: 25px;
+}
+
+.title {
+  margin: 0;
+  font-size: 40px;
+}
+
+.check-area {
+  display: flex;
+  gap: 60px;
+  margin: 30px 0;
+}
+
+label[for="character"], label[for="actor"] {
+  font-size: 30px;
+  cursor: pointer;
+}
+
+label[for="character"]:hover, label[for="actor"]:hover {
+  color: rgb(230, 196, 9);
+  font-weight: 600;
+}
+
+.checkbox-input {
+  display: none;
+}
+
+label[for="selectCharacter"] {
+  font-size: 34px;
+}
+
+.select {
+  font-family: 'Bigelow Rules', serif;
+  font-size: 30px;
+  margin-left: 10px;
+  padding: 2px 2px 2px 8px;
+  width: 500px;
+  border: none;
+  background-color: rgba(183, 156, 109, 0.5);
+  cursor: pointer;
+}
+
+.option {
+  font-family: 'Bigelow Rules', serif;
+}
+
+.submit-button {
+  margin-top: 30px;
+  font-family: 'Bigelow Rules', serif;
+  font-size: 30px;
+  font-weight: 600;
+  border: none;
+  padding: 2px 281px;
+  background-color: rgba(183, 156, 109, 0.5);
+  cursor: pointer;
+}
+
