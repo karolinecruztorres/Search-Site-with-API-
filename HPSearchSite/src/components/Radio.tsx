@@ -1,57 +1,67 @@
 import { useState } from "react";
+import styled from "styled-components";
+
+const LabelStyle = styled.label`
+  text-align: center;
+  font-size: 30px;
+  color: rgb(44, 44, 44);
+  cursor: pointer;
+  
+  &:active {
+    color: goldenrod;
+  }
+`;
 
 const Radio = () => {
-  const [radioImage, setRadioImage] = useState(
+  const [radioImage, setRadioImage] = useState("");
+
+  const handleOnChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setRadioImage(event.target.value);
+  };
+
+  const selected = (
     <img
-      src="../src/images/unselected_icon.png"
-      alt="Unselected Golden Snitch"
+      src="../src/images/selected_icon.png"
+      alt="selected"
       className="radio-img"
     />
   );
 
-  const changeRadio = (event: any) => {
-    event.target.value === "actor"
-      ? setRadioImage(
-          <img
-            src="../src/images/selected_icon.png"
-            alt="Selected Golden Snitch"
-            className="radio-img"
-          />
-        )
-      : setRadioImage(
-          <img
-            src="../src/images/unselected_icon.png"
-            alt="Unselected Golden Snitch"
-            className="radio-img"
-          />
-        );
-  };
+  const unselected = (
+    <img
+      src="../src/images/unselected_icon.png"
+      alt="unselected"
+      className="radio-img"
+    />
+  );
 
   return (
     <div className="radio-area">
-      <label htmlFor="character" onClick={changeRadio}>
+      <LabelStyle htmlFor="character">
         Character
-        {radioImage}
+        {radioImage === "character" ? selected : unselected}
         <input
           type="radio"
-          name="choices"
+          name="choice"
           id="character"
           className="radio-input"
           value="character"
+          onChange={handleOnChange}
         />
-      </label>
+      </LabelStyle>
 
-      <label htmlFor="actor" onClick={changeRadio}>
+      <LabelStyle htmlFor="actor">
         Actor
-        {radioImage}
+        {radioImage === "actor" ? selected : unselected}
         <input
           type="radio"
-          name="choices"
+          name="choice"
           id="actor"
           className="radio-input"
           value="actor"
+          onChange={handleOnChange}
         />
-      </label>
+      </LabelStyle>
     </div>
   );
 };
