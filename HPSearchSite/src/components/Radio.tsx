@@ -1,16 +1,4 @@
 import { useState } from "react";
-import styled from "styled-components";
-
-const LabelStyle = styled.label`
-  text-align: center;
-  font-size: 30px;
-  color: rgb(44, 44, 44);
-  cursor: pointer;
-  
-  &:active {
-    color: goldenrod;
-  }
-`;
 
 const Radio = () => {
   const [radioImage, setRadioImage] = useState("");
@@ -35,9 +23,19 @@ const Radio = () => {
     />
   );
 
+  const nonActive = "#2c2c2c";
+  const active = "#eeaa17";
+
   return (
     <div className="radio-area">
-      <LabelStyle htmlFor="character">
+      <label
+        htmlFor="character"
+        style={
+          radioImage === "character"
+            ? { color: active, fontWeight: 600 }
+            : { color: nonActive }
+        }
+      >
         Character
         {radioImage === "character" ? selected : unselected}
         <input
@@ -48,9 +46,16 @@ const Radio = () => {
           value="character"
           onChange={handleOnChange}
         />
-      </LabelStyle>
+      </label>
 
-      <LabelStyle htmlFor="actor">
+      <label
+        htmlFor="actor"
+        style={
+          radioImage === "actor"
+            ? { color: active, fontWeight: 600 }
+            : { color: nonActive }
+        }
+      >
         Actor
         {radioImage === "actor" ? selected : unselected}
         <input
@@ -61,7 +66,7 @@ const Radio = () => {
           value="actor"
           onChange={handleOnChange}
         />
-      </LabelStyle>
+      </label>
     </div>
   );
 };

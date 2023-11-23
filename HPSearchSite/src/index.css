@@ -31,16 +31,12 @@ body {
   margin: 30px 0;
 }
 
-/* label[for="character"], label[for="actor"] {
+label[for="character"], label[for="actor"] {
   text-align: center;
   font-size: 30px;
-  color: rgb(44, 44, 44);
+  /* color: rgb(44, 44, 44); */
   cursor: pointer;
 }
-
-label[for="character"]:active, label[for="actor"]:active {
-  color: goldenrod;
-} */
 
 .radio-img {
   height: 40px;
