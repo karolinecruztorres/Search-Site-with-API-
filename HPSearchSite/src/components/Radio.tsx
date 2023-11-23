@@ -23,18 +23,11 @@ const Radio = () => {
     />
   );
 
-  const nonActive = "#2c2c2c";
-  const active = "#eeaa17";
-
   return (
     <div className="radio-area">
       <label
         htmlFor="character"
-        style={
-          radioImage === "character"
-            ? { color: active, fontWeight: 600 }
-            : { color: nonActive }
-        }
+        className={radioImage === "character" ? "label-active" : "label-nonActive"}
       >
         Character
         {radioImage === "character" ? selected : unselected}
@@ -50,11 +43,7 @@ const Radio = () => {
 
       <label
         htmlFor="actor"
-        style={
-          radioImage === "actor"
-            ? { color: active, fontWeight: 600 }
-            : { color: nonActive }
-        }
+        className={radioImage === "actor" ? "label-active" : "label-nonActive"}
       >
         Actor
         {radioImage === "actor" ? selected : unselected}

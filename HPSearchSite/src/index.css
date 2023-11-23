@@ -31,10 +31,18 @@ body {
   margin: 30px 0;
 }
 
-label[for="character"], label[for="actor"] {
+.label-nonActive {
   text-align: center;
   font-size: 30px;
-  /* color: rgb(44, 44, 44); */
+  color: rgb(44, 44, 44);
+  cursor: pointer;
+}
+
+.label-active {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 600;
+  color: #dfa221;
   cursor: pointer;
 }
 
@@ -44,9 +52,9 @@ label[for="character"], label[for="actor"] {
   margin: 5px auto 0 auto;
 }
 
-/* .radio-input {
+.radio-input {
   display: none;
-} */
+} 
 
 label[for="selectCharacter"] {
   font-size: 36px;
