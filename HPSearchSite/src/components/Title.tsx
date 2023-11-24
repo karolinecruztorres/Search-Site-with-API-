@@ -1,5 +1,12 @@
+import styled from "styled-components";
+
+const StyledTitle = styled.h1`
+  margin: 0;
+  font-size: 42px;
+`;
+
 const Title = () => {
-  return <h1 className="title">How do you want to search by?</h1>;
+  return <StyledTitle>How do you want to search by?</StyledTitle>;
 };
 
 export default Title;

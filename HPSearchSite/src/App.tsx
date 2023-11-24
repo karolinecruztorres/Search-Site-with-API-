@@ -16,7 +16,7 @@ function App() {
     fetch("https://hp-api.onrender.com/api/characters")
       .then((response) => response.json())
       .then((data: Character[]) => {
-        setSelectedCharacter(data[4]);
+        setSelectedCharacter(data[0]);
       })
       .catch((error) => {
         console.error(error);
